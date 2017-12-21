@@ -1,0 +1,376 @@
+/*
+* @Author: Administrator
+* @Date:   2017-12-20 20:45:46
+* @Last Modified by:   Administrator
+* @Last Modified time: 2017-12-21 00:54:43
+*/
+@import url("base.css");
+body{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	background: white;
+	background: url('../img/body.jpg') no-repeat center -50px;
+}
+.head{
+	width: 100%;
+	height: 166px;
+
+}
+.head-top{
+	width: 100%;
+	height: 30px;
+	background: #F5F5F5;
+	margin: 0 auto;
+	z-index: 10;
+}
+.head-top1200{
+	width: 1200px;
+	height: 30px;
+	margin: 0 auto;
+}
+.head-left{
+	width: 202px;
+	height: 30px;
+	float: left;
+}
+.head-left span{
+	display: block;
+	float: left;
+	padding-right: 10px;
+	font-size: 12px;
+	color: #808080;
+	line-height: 30px;
+}
+.left-text{
+	float: left;
+	width: 72px;
+	height: 30px;
+	position: relative;
+}
+.left-text a{
+	display: block;
+	width: 70px;
+	height: 30px;
+	border-left: 1px solid #f5f5f5;
+    border-right: 1px solid #f5f5f5;
+    text-align: center;
+    font-size: 12px;
+    line-height: 30px;
+    color: #E40077;
+    cursor: pointer;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 112;
+}
+.head-right{
+	float: right;
+	width: auto;
+	height: 30px;
+}
+.a1{
+	display: block;
+	float: left;
+	padding: 0 17px;
+    color: #808080;
+    font-size: 12px;
+    cursor: pointer;
+    line-height: 30px;
+
+}
+.head-right a:hover{
+	color: #337ab7;
+}
+.a2{
+	float: left;
+    width: 110px;
+    height: 30px;
+    position: relative;
+}
+.a2-text{
+	display: block;
+    width: 108px;
+    height: 30px;
+    border-left: 1px solid #f5f5f5;
+    border-right: 1px solid #f5f5f5;
+    text-align: center;
+    color: #808080;
+    font-size: 12px;
+    line-height: 30px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 112;
+}
+.a3{
+	display: block;
+    float: left;
+    padding: 0 17px;
+    color: #808080;
+    font-size: 12px;
+    cursor: pointer;
+    line-height: 30px;
+}
+.a4{
+	display: block;
+    float: left;
+    padding: 0 17px;
+    color: #808080;
+    font-size: 12px;
+    cursor: pointer;
+    line-height: 30px;
+}   
+
+.a4:hover{
+	color: #3eb4fa;
+}
+.a5{
+	display: block;
+    float: left;
+    padding: 0 17px;
+    color: #808080;
+    font-size: 12px;
+    cursor: pointer;
+    line-height: 30px;
+}
+.a6{
+	display: block;
+    float: left;
+    padding: 0 17px;
+    color: #808080;
+    font-size: 12px;
+    cursor: pointer;
+    line-height: 30px;
+}
+.a7{
+	display: block;
+    float: left;
+    padding: 0 17px;
+    color: #808080;
+    font-size: 12px;
+    cursor: pointer;
+    line-height: 30px;
+}
+.head-middle{
+	width: 1200px;
+    height: 88px;
+    margin: 0 auto;
+}
+
+.middle-img img{
+	float: left;
+    width: 230px;
+    height: auto;
+    margin: 20px 0 0 0;
+    display: block;
+}
+.drop{
+	float: left;
+    margin: 40px 0 0 35px;
+    position: relative;
+    z-index: 100;
+}
+.city{
+	cursor: pointer;
+    height: 18px;
+    padding: 0 15px 0 0;
+    font-size: 16px;
+    line-height: 18px;
+    color: #333333;
+
+}
+.middle-right{
+	width: 500px;
+	height: 68px;
+	float: right;
+	position: relative;
+	margin-top: 12px;
+}
+.input{
+	background: url('../img/searchBg.png') no-repeat left center/100% auto;
+	padding-top: 10px;
+	position: static;
+	width: 100%;
+	height: 36px;
+}
+.text{
+    outline: none;
+    box-shadow: inset 0 0 0 rgba(0,0,0,0);
+    z-index: 0;
+    border: 0;
+    color: #666666;
+    height: 34px;
+    line-height: 34px;
+    font-size: 12px;
+    box-sizing: border-box;
+    border-radius: 0px;
+    background: none;
+    position: relative;
+    float: left;
+    width: 100%;
+    margin-bottom: 0;
+    padding: 3px 12px;
+}
+.tansuo{
+	display: block;
+    width: 80px;
+    height: 36px;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    box-sizing: border-box;
+}
+.btn{
+	outline: none;
+    box-shadow: inset 0 0 0 rgba(0,0,0,0);
+    width: 80px;
+    height: 36px;
+    padding: 0px;
+    border: 0px;
+    border-radius: 0px;
+    background: transparent;
+    text-align: center;
+    font-size: 16px;
+    z-index: 2;
+    margin-left: -1px;
+    cursor: pointer;
+    display: block;
+    color: rgba(0, 0, 0, 0);
+}
+.hot-hidden{
+	padding-top: 5px;
+	width: 500px;
+	height: 22px;
+}
+    
+.hot1{
+	display: block;
+    padding: 0 20px 0 0;
+    color: #e40077;
+    cursor: pointer;
+    width: 57px;
+    height: 17px;
+    font-size: 12px;
+    line-height: 17px;
+     float: left;
+}
+.hot2{
+	
+    float: left;
+    display: block;
+    padding: 0 20px 0 0;
+    color: #333333;
+    cursor: pointer;
+    width: 48px;
+    height: 17px;
+    font-size: 12px;
+    line-height: 17px;
+}
+.hot3{
+	
+    float: left;
+    display: block;
+    padding: 0 20px 0 0;
+    color: #e40077;
+    cursor: pointer;
+    width: 72px;
+    height: 17px;
+    font-size: 12px;
+    line-height: 17px;
+}
+.hot4{
+	float: left;
+    display: block;
+    padding: 0 20px 0 0;
+    color: #333333;
+    cursor: pointer;
+    width: 24px;
+    height: 17px;
+    font-size: 12px;
+    line-height: 17px;
+}
+.hot5{
+	float: left;
+    display: block;
+    padding: 0 20px 0 0;
+    color: #e40077;
+    cursor: pointer;
+    width: 36px;
+    height: 17px;
+    font-size: 12px;
+    line-height: 17px;
+
+}
+.hot6{
+	float: left;
+    display: block;
+    padding: 0 20px 0 0;
+    color: #333333;
+    cursor: pointer;
+    width: 48px;
+    height: 17px;
+    font-size: 12px;
+    line-height: 17px;
+}
+.hot-hidden a:hover{
+	color:#3eb4fa;
+}
+.head-nav{
+	width: 1200px;
+    height: 47px;
+    margin: 0 auto;
+    border-bottom: 1px solid #3eb4fa;
+    position: relative;
+}
+.fuwu{
+	display: block;
+	float: left;
+    width: 235px;
+    height: 47px;
+    font-size: 17px;
+    text-align: center;
+    line-height: 47px;
+    color: #ffffff;
+    background: #3eb4fa;
+}
+.nav{
+	float: left;
+    height: 47px;
+    padding-left: 29px;
+    width: 594px;
+    margin-bottom: 0;
+    list-style: none;
+}
+.nav li a{
+	display: block;
+    padding: 0 29px;
+    font-size: 16px;
+    background: none;
+    color: #222222;
+    line-height: 47px;
+}
+.nav li .active{
+	color: #3eb4fa;
+}
+.nav li{
+	float: left;
+}
+.nav li a:hover{
+	color: #3eb4fa;
+}
+.slide-content{
+	width: 100%;
+	height: 400px;
+	margin: 0 auto;
+    position: relative;
+}
+.notice{
+	width: 1200px;
+    height: 24px;
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    margin-left: -600px;
+    z-index: 5;
+}
