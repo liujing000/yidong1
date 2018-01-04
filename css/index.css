@@ -2,13 +2,12 @@
 * @Author: Administrator
 * @Date:   2017-12-20 20:45:46
 * @Last Modified by:   Administrator
-* @Last Modified time: 2017-12-24 23:59:35
+* @Last Modified time: 2018-01-04 00:38:03
 */
 @import url("base.css");
 body{
 	width: 100%;
 	height: auto;
-	overflow: hidden;
 	background: white;
 	background: url('../img/body.jpg') no-repeat center 0px;
 }
@@ -362,7 +361,6 @@ body{
 .bannerbig{
 	width: 100%;
 	height: 400px;
-	margin: 0 auto;
     position: relative;
 }
 .bannersmall{
@@ -377,7 +375,7 @@ body{
 .slide{
 	width: 234px;
 	height: 398px;
-	position: relative;
+	/* position: relative; */
     left: 0px;
     top: 0px;
     background: #ffffff;
@@ -413,21 +411,69 @@ body{
 .list li a img{
 	display: inline-block;
 }
-.item{
+.bnpre{
+    width: 34px;
+    height: 69px;
+    left: 0;
+    top: 199px;
+    position: absolute;
+    z-index: 9999;
+
+}
+.bnpre img{
+    width: 100%;
+    height: 100%;
+}
+.bnnext{
+    width: 34px;
+    height: 69px;
+    right: 0;
+    top: 199px;
+    position: absolute;
+    z-index: 9999;
+
+}
+.bnnext img{
+    width: 100%;
+    height: 100%;
+}
+.bn-container{
+    width: 705px;
+    height: 398px;
+    left: 234px;
+    top: 0;
+   
+    float: left;
+   position: absolute;
+}
+.img-container{
 	width: 705px;
 	height: 398px;
-	left: 235px;
-	right: 260px;
+    position: relative;
+	/* left: 234px;
+	top: 0;
 	background: red;
 	float: left;
+   position: absolute; */
+  
 }
-.item a img{
-	width: 100%;
+.img-container li{
+    width: 705px;
     height: 398px;
-    margin: 0 auto;
-    cursor: pointer;
-    border: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: all 1s;
 }
+.img-container li a{
+    display: block;
+}
+.img-container li.active{
+    z-index: 1;
+    opacity: 1;
+}
+
 .btn-box{
 	width: 170px;
 	height: 10px;
@@ -435,6 +481,8 @@ body{
 	position: absolute;
 	right: 528px;
 	bottom: 10px;
+    z-index: 999;
+
 }
 .btn-box li{
 	float: left;
@@ -443,8 +491,11 @@ body{
 	border-radius: 50%;
 	background: rgba(0, 0, 0, 0.6);
 	margin-right: 10px;
-	z-index: 10;
+	
 	cursor: pointer;
+}
+.btn-box li.active{
+    background: rgba(228, 0, 120, 1.0);
 }
 .btn-box li:last-child{
 	margin-right: 0;
@@ -544,9 +595,10 @@ body{
 }
 .insselect{
 	width: 240px;
-    height: auto;
+    height: 34px;
     padding: 10px 0;
     text-align: center;
+
 }
 .insselect a{
 	cursor: pointer;
@@ -566,4 +618,117 @@ body{
 	border: 1px solid #e30077;
     color: #ffffff;
     background: #e30077;
+}
+.chongzhi{
+	width: 230px;
+    margin: 0 auto;
+    padding-top: 12px;
+    height: 34px;
+}
+.chongzhi a{
+	display: inline-block;
+    float: right;
+    width: 129px;
+    height: 34px;
+    font-size: 14px;
+    border-radius: 2px;
+    text-align: center;
+    color: #ffffff;
+    background: #3eb4fa;
+    line-height: 34px;
+}
+.promotion{
+	width: 1200px;
+    height: 170px;
+    margin: 20px auto 0;
+    background: red;
+}
+.promo235{
+	float: left;
+    width: 235px;
+    height: 170px;
+}
+.promo235 a{
+	display: block;
+	width: 235px;
+    height: 170px;
+
+}
+.promo235 a img{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.promo960{
+	float: right;
+    width: 960px;
+    height: 170px;
+    position: relative;
+    overflow: hidden;
+}
+.yhpre{
+    position: absolute;
+    right: 0px;
+    top: 70px;
+    height: 35px;
+    width: 28px;
+    background: url('../img/next2.png') no-repeat center center;
+    cursor: pointer;
+    z-index: 10;
+}
+.yhnext{
+    position: absolute;
+    left: 0px;
+    top: 70px;
+    height: 35px;
+    width: 28px;
+    background: url('../img/prev2.png') no-repeat center center;
+    cursor: pointer;
+    z-index: 10;
+}
+.yhcon{
+    height: 170px;
+    overflow: hidden;
+    position: relative;
+    width: 960px;
+}
+.yhgundong{
+    position: absolute;
+    width: 3388px;
+    height: 170px;
+    background: yellow;
+}
+.index{
+    width: 235px;
+    height: 170px;
+    float: left;
+    margin: 0 7px 0 0;
+    background: #f4f4f4;
+    position: relative;
+}
+.yhclearfix{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.yhclearfix h3{
+    width: 215px;
+    padding: 13px 10px 0;
+    font-size: 18px;
+    color: #222222;
+
+}
+.yhclearfix p{
+    width: 215px;
+    padding: 6px 10px 0;
+    font-size: 14px;
+    color: #808080;
+}
+.yhclearfix img{
+    display: block;
+    width: 120px;
+    height: 100px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }
