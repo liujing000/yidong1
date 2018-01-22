@@ -2,6 +2,7 @@
  * Created by Administrator on 2017/12/28/028.
  */
 // 轮播图
+
 {
 
     let imgs=document.querySelectorAll(".imgs-box li");
@@ -104,8 +105,10 @@
                         floors[i].classList.remove("active");
                         em[i].style.display="block";
                         zi[i].style.display="none";
+
                     }
                     floors[index].classList.add("active");
+
                     em[index].style.display="none";
                     zi[index].style.display="block";
                 }
@@ -118,12 +121,12 @@
     let floors = document.querySelectorAll(".menu ul li");
     let em=document.querySelectorAll(".menu ul li em");
     let zi=document.querySelectorAll(".menu ul li span");
-    console.log(zi);
+
     floors.forEach(function (ele, index) {
         ele.onclick = function () {
             let ot = lists[index].offsetTop;
             let now = document.documentElement.scrollTop;
-            let speed = (ot - now) * 30 / 400;
+            let speed = (ot - now) * 30 / 300;
             let time = 0;
             flag=false;
             let t = setInterval(function () {
@@ -146,18 +149,33 @@
     box.forEach(function(value,index){
         value.onmouseover=function(){
             for(let i=0;i<box.length;i++){
+
                 item[i].classList.remove("xianshi")
             }
             item[index].classList.add("xianshi")
-        }
+
+        };
         value.onmouseout=function(){
             for(let i=0;i<box.length;i++){
                 item[i].classList.remove("xianshi")
             }
         }
-    })
-}
+    });
 
+}
+// 城市
+{
+    let city=document.querySelector(".nav-left-city");
+    let cityBox=document.querySelector(".city");
+    let navBox=document.querySelector(".nav-box");
+    city.onclick=function(e){
+        e.stopPropagation();
+        cityBox.style.display="block";
+    }
+    navBox.onclick=function(){
+        cityBox.style.display="none";
+    }
+}
 // 优惠专区
 {
     let box=document.querySelector(".promotion-right");
@@ -188,13 +206,13 @@
             inner.style.marginLeft="-1694px";
             n=7;
         }
-    })
+    });
     window.onblur=box.onmouseover=function(){
         clearInterval(st);
-    }
+    };
     window.onfocus=box.onmouseout=function(){
         st=setInterval(movefn,3000)
-    }
+    };
     let flag=true;
     right.onclick=function(){
         if(flag){
@@ -202,7 +220,7 @@
             flag=false;
             movefn();
         }
-    }
+    };
     left.onclick=function(){
         if(flag){
             dir="left";
@@ -211,4 +229,161 @@
         }
     }
 }
+
+// 5F轮播
+{
+    let b=document.querySelector(".smallslide ");
+    let hd=document.querySelectorAll(".hd ul li");
+    let bd=document.querySelectorAll(".bd ul li");
+    hd.forEach(function (value,index) {
+        value.onmouseenter=function () {
+            for(let i=0;i<hd.length;i++){
+                hd[i].classList.remove("hd-one");
+                bd[i].classList.remove("bdd");
+            }
+            value.classList.add("hd-one");
+            bd[index].classList.add("bdd");
+            n=index;
+        };
+    });
+
+    let n=0;
+    function fn() {
+        n++;
+        if(n===hd.length){
+            n=0;
+        }
+        for(let i=0;i<hd.length;i++){
+            hd[i].classList.remove("hd-one");
+            bd[i].classList.remove("bdd");
+        }
+        hd[n].classList.add("hd-one");
+        bd[n].classList.add("bdd");
+    }
+
+    let st=setInterval(fn,5000);
+
+        b.onmouseover=function(){
+            clearInterval(st);
+        }
+        b.onmouseout=function(){
+            st=setInterval(fn,5000);
+        }
+}
+//流行乐风
+{
+    let inner=document.querySelector(".inner_fy2");
+    let yier=document.querySelector(".yier");
+    let pprev=document.querySelector(".pprev");
+    let nnext=document.querySelector(".nnext");
+
+    pprev.onclick=function () {
+        inner.style.margin="20px 0";
+        yier.innerHTML="1/2";
+    };
+
+
+    nnext.onclick=function () {
+        inner.style.margin="20px -705px";
+        yier.innerHTML="2/2"
+    };
+}
+
+// 咪咕音乐选项卡
+{
+    let tabboxinner=document.querySelectorAll(".tabbox_inner ");
+    let tabnavli=document.querySelectorAll(".tabnav li");
+    function jiujiji(sigetuijian,shu) {
+        tabnavli.forEach(function (value,index) {
+            let content=sigetuijian[index];
+            let prevv=content.querySelector(".prevv");
+            let nextt=content.querySelector(".nextt");
+            let yer=content.querySelector(".yer");
+            let innerfy=content.querySelectorAll(".inner_fy");
+            value.onmouseenter=function () {
+                for(let i=0;i<tabnavli.length;i++){
+
+                    for(let j=0;j<sigetuijian.length;j++){
+                        sigetuijian[i].style.display="none"
+                    }
+                    tabnavli[i].classList.remove("tabnavli");
+                    content.style.display="block";
+
+                }
+                value.classList.add("tabnavli");
+            };
+            innerfy.forEach(function (v,i) {
+                prevv.onclick=function () {
+
+                    innerfy[0].style.display="block";
+                    innerfy[1].style.display="none";
+                    yer.innerHTML="1/2";
+                };
+                nextt.onclick=function () {
+                    innerfy[0].style.display="none";
+                    innerfy[1].style.display="block";
+
+                    yer.innerHTML="2/2"
+                };
+            })
+        });
+    }
+    jiujiji(tabboxinner);
+}
+
+// 公告
+{
+    let left=document.querySelector(".left") ;
+    let right=document.querySelector(".right") ;
+    let rowli=document.querySelectorAll(".row li") ;
+    let row=document.querySelector("ul.row") ;
+    let indexgg=document.querySelector(".indexgg") ;
+
+    left.onclick=function() {
+        let row=document.querySelector(".row");
+        row.appendChild(row.firstChild);
+
+    };
+    right.onclick=function() {
+        let row=document.querySelector(".row");
+        row.insertBefore(row.lastChild,row.firstChild);
+    };
+    function fn(){
+         let row=document.querySelector(".row");
+         row.appendChild(row.firstChild);
+
+     }
+    let ttt=setInterval(fn,2000);
+    indexgg.onmouseenter=function () {
+        clearInterval(ttt)
+    } ;
+    indexgg.onmouseleave=function () {
+        ttt=setInterval(fn,2000);
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

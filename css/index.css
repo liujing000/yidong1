@@ -219,7 +219,6 @@ nav{
     width: 1200px;
     height: 100%;
     margin: 0 auto;
-    overflow: hidden;
 }
 .nav-left-img{
     display: block;
@@ -251,10 +250,14 @@ nav{
     height: 71px;
     padding: 10px 20px;
     position: absolute;
-    top: 0;
+    top: 20px;
     left: 0;
-    z-index: 3;
+    z-index: 1000;
     box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    background: #fff;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 4px;
+    display: none;
 }
 .city li{
     font-size: 12px;
@@ -403,10 +406,14 @@ nav{
     border: 1px solid #ffffff;
     background: #ffffff url("../img/nav_bgli.png") no-repeat 195px center;
     cursor: pointer;
+    z-index: 999;
 }
 .banner-left li:hover{
     border: 1px solid #3eb4fa;
+    width: 238px !important;
     border-right:2px solid #fff;
+
+
 }
 .banner-left li span{
     display: flex;
@@ -437,7 +444,7 @@ nav{
     height: 415px;
     border: 1px solid #3eb4fa;
     background: #ffffff;
-    z-index: 999;
+    z-index: 900;
     position: absolute;
     left: 233px;
     top: 0;
@@ -1272,6 +1279,11 @@ section{
     font: 14px/14px "microsoft yahei";
     color: #808080;
 }
+.tabnav li.tabnavli{
+    width: 100%;
+    border-left: 5px solid #ef2e72;
+    background: #f6f7f7;
+}
 .tabnav li:hover{
     width: 100%;
     border-left: 5px solid #ef2e72;
@@ -1293,6 +1305,9 @@ section{
     margin: 0 auto;
     background: #ffffff;
     overflow: hidden;
+    position: absolute;
+    top:0;
+    left:0;
 }
 .tabbox_inner h4 {
     padding-bottom: 40px;
@@ -1322,8 +1337,16 @@ section{
     height: 18px;
 }
 .tabbox_inner .inner_fy {
-    margin: 0 auto;
+    position: absolute;
+    top: 66px;
+    left: 20px;
 }
+.tabbox_inner .inner_fy:last-child {
+    display:none;
+}
+
+
+
 .tabbox .tabbox_inner .inner_fy dl {
     width: 217px;
     margin: 0 auto 8px;
@@ -1422,6 +1445,9 @@ section{
     height: 100%;
     z-index: 0;
 }
+.slideBox .bd li.bdd{
+    z-index: 3;
+}
 .slideBox .bd li{
     position: absolute;
     width: 710px;
@@ -1463,16 +1489,17 @@ section{
     height: 18px;
 }
 .recomandbox .inner_fy2 {
-    width: 722px;
+    width: 1454px;
     height: 146px;
-    margin: 20px auto 0;
+    margin: 20px  0;
     overflow: hidden;
+
 }
 .recomandbox .inner_fy2 .box {
     float: left;
     width: 120px;
     height: 144px;
-    margin-left: 20px;
+    margin-left: 21px;
 }
 .recomandbox .inner_fy2 .box img {
     float: left;
@@ -1627,7 +1654,7 @@ section{
 .indexgg2 .gz {
     float: left;
     display: block;
-    padding: 7px 20px 0 23px;
+    padding: 27px 20px 0 23px;
 }
 .indexgg2 .gz img {
     width: 43px;
